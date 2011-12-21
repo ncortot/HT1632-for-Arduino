@@ -176,6 +176,7 @@ void HT1632Class::initialize(int pinWR, int pinDATA) {
   writeCommand(HT1632_CMD_SYSEN); //Turn on system
   writeCommand(HT1632_CMD_LEDON); // Turn on LED duty cycle generator
   writeCommand(HT1632_CMD_PWM(16)); // PWM 16/16 duty
+  writeCommand(HT1632_CMD_BLOFF); // Be sure blink is off.
   
   select();
    
