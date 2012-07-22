@@ -192,8 +192,13 @@ void HT1632Class::initialize(int pinWR, int pinDATA) {
   drawTarget(0);
 }
 
-void HT1632Class::setPixel(int loc_x, int loc_y) {
-  mem[_tgtBuffer][GET_ADDR_FROM_X_Y(loc_x,loc_y)] = (mem[_tgtBuffer][GET_ADDR_FROM_X_Y(loc_x,loc_y)] | (1 << (loc_y % 4))) | MASK_NEEDS_REWRITING;
+void HT1632Class::setPixel(int loc_x, int loc_y, bool datum) {
+  if (datum) {
+    mem[_tgtBuffer][GET_ADDR_FROM_X_Y(loc_x,loc_y)] = (mem[_tgtBuffer][GET_ADDR_FROM_X_Y(loc_x,loc_y)] | (1 << (loc_y % 4))) | MASK_NEEDS_REWRITING;
+  }
+  else {
+    mem[_tgtBuffer][GET_ADDR_FROM_X_Y(loc_x,loc_y)] = (mem[_tgtBuffer][GET_ADDR_FROM_X_Y(loc_x,loc_y)] & ~(1 << (loc_y % 4))) | MASK_NEEDS_REWRITING;
+  }
 }
 
 void HT1632Class::drawTarget(char targetBuffer) {
