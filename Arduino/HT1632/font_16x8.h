@@ -7,6 +7,8 @@
 #ifndef __FONT16X8_H
 #define __FONT16X8_H
 
+#include <avr/pgmspace.h>
+
 #define FONT_16X8_HEIGHT  16
 
 #define FONT_16X8_STEP_GLYPH 32

@@ -6,6 +6,8 @@
 #ifndef __IMAGES_H
 #define __IMAGES_H
 
+#include <avr/pgmspace.h>
+
 prog_char IMG_MAIL [] PROGMEM = {0b1111, 0b1111, 0b0011, 0b1000, 0b0101, 0b1000, 0b1001, 0b1000, 0b0001, 0b1001, 0b0001, 0b1010, 0b0001, 0b1010, 0b0001, 0b1001, 0b1001, 0b1000, 0b0101, 0b1000, 0b0011, 0b1000, 0b1111, 0b1111};
 #define IMG_MAIL_WIDTH 	12
 #define IMG_MAIL_HEIGHT 	 8

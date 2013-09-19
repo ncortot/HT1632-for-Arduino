@@ -7,6 +7,8 @@
 #ifndef __FONT8X6_H
 #define __FONT8X6_H
 
+#include <avr/pgmspace.h>
+
 #define FONT_8X6_HEIGHT  8
 
 #define FONT_8X6_STEP_GLYPH 12

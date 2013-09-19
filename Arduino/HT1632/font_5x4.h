@@ -7,6 +7,8 @@
 #ifndef __FONT5X4_H
 #define __FONT5X4_H
 
+#include <avr/pgmspace.h>
+
 #define FONT_5X4_HEIGHT  5
 
 #define FONT_5X4_STEP_GLYPH 10
